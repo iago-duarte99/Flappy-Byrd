@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="theme-color" content="#07182e">
+    <link rel="stylesheet" href="style.css"><title>Flappy Byrd — Sky Quest</title>
+</head>
+<body>
+<main class="game-shell" aria-label="Flappy Byrd">
+ <header class="topbar"><div class="brand"><span class="brand-mark">FB</span><span>FLAPPY <b>BYRD</b></span></div><div class="profile-pill"><span id="levelLabel">NÍVEL 1</span><div class="xp-track"><i id="xpFill"></i></div><strong id="xpLabel">0/100 XP</strong></div><div class="currency"><span>◆</span><strong id="coinLabel">0</strong></div></header>
+ <section class="game-card"><canvas id="gameCanvas" width="420" height="680" aria-label="Área do jogo"></canvas><div class="scanlines" aria-hidden="true"></div>
+  <section id="startScreen" class="overlay hero-panel"><p class="eyebrow">SKY QUEST</p><h1>Voe. Evolua.<br><em>Domine os céus.</em></h1><p class="subtitle">Complete missões, ganhe moedas e desbloqueie novos recordes.</p><button id="playButton" class="primary-button"><span>▶</span> COMEÇAR VOO</button><p class="control-hint"><kbd>ESPAÇO</kbd> ou toque para voar</p></section>
+  <section id="gameOverScreen" class="overlay result-panel hidden"><p class="eyebrow">FIM DO VOO</p><h2>Pronto para outra?</h2><div class="score-ring"><strong id="finalScore">0</strong><span>PONTOS</span></div><div class="run-rewards"><span>RECORDE <b id="bestScore">0</b></span><span>+<b id="earnedCoins">0</b> ◆</span><span>+<b id="earnedXp">0</b> XP</span></div><button id="retryButton" class="primary-button"><span>↻</span> VOAR NOVAMENTE</button><button id="homeButton" class="text-button">VOLTAR AO INÍCIO</button></section>
+  <div id="toast" class="toast hidden" role="status"></div>
+ </section>
+ <section class="mission-panel"><div class="section-heading"><div><p>DESAFIOS</p><h2>Missões de voo</h2></div><span id="missionCount">0/3 concluídas</span></div><div id="missionList" class="mission-list"></div></section>
+ <footer><span>PROGRESSO SALVO AUTOMATICAMENTE</span><button id="resetProgress">Reiniciar progresso</button></footer>
+</main>
+<audio id="jumpSound" src="jump.mp3" preload="auto"></audio><audio id="scoreSound" src="score.mp3" preload="auto"></audio><audio id="gameOverSound" src="game-over.wav" preload="auto"></audio><script src="game.js"></script>
+</body></html>
